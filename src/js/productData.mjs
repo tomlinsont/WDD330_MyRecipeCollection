@@ -13,7 +13,7 @@ export function getData(category = "chicken") {
 }
 
 export async function findProductByLabel(label) {
-  const products = await getData();
-  console.log(products);
-  return products.find((item) => item.label === label);
+  const recipes = await getData();
+  console.log(recipes);
+  return recipes.find((item) => item.label === label);
 }

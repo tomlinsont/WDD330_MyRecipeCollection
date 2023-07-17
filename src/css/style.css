@@ -91,7 +91,7 @@ button {
 main p {
   font-weight: bold;
 }
-.product-list {
+.recipe-list {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -99,20 +99,29 @@ main p {
   padding-left: 0;
 }
 
-.product-card {
+.recipe-card {
   flex: 1 1 45%;
   margin: 0.25em;
   padding: 0.5em;
   border: 1px solid var(--light-grey);
   max-width: 250px;
 }
-.product-card p {
+.recipe-card p,
+.recipe-card h2,
+.recipe-card h3 {
   margin: 0.5em 0;
 }
-.product-card-name {
+.recipe-card-name {
   font-size: var(--small-font);
 }
 
+.card__brand {
+  font-size: var(--small-font);
+}
+
+.card__name {
+  font-size: 1em;
+}
 
 /* footer */
 .row{
@@ -120,4 +129,23 @@ main p {
   font-size: var(--small-font);
   color: var(--dark-gray);
   padding: 1em;
+}
+
+@media screen and (min-width: 500px) {
+  body {
+    max-width: 1080px;
+    margin: auto;
+  }
+  /*.mission {
+    font-size: 1.2em;
+  }*/
+  .cart-card {
+    font-size: inherit;
+    grid-template-columns: 150px auto 15%;
+    display: grid;
+  grid-template-columns: 25% auto 15%;
+  font-size: var(--small-font);
+  /* max-height: 120px; */
+  align-items: center;
+  }
 }
