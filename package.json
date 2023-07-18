@@ -34,6 +34,8 @@
     "last 3 safari versions"
   ],
   "dependencies": {
-    "lint": "^1.1.2"
+    "https": "^1.0.0",
+    "lint": "^1.1.2",
+    "node-fetch": "^3.3.1"
   }
 }
