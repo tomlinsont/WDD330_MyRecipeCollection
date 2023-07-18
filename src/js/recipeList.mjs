@@ -3,7 +3,7 @@ import { renderListWithTemplate } from "./utils.mjs";
 
 function recipeCardTemplate(recipe) {
   return `<li class="recipe-card">
-  <a href="views/recipe.html?recipe=${recipe.label}">
+  <a href="../views/recipe.html?recipe=${recipe.label}">
   <img
     src="${recipe.image}"
     alt="Image of ${recipe.label}"
@@ -20,12 +20,12 @@ function renderRecipeList(recipeList, el) {
   el.insertAdjacentHTML('afterbegin', htmlStrings.join(''));
 }*/
 
-export default async function recipeList(selector, catagory) {
+export default async function recipeList(selector, category) {
   // get the element we will insert the list into from the selector
   const el = document.querySelector(selector);
   console.log(el);
   // get the list of products
-  const recipes = await getData(catagory);
+  const recipes = await getData(category);
   console.log(recipes);
   // render out the product list to the element
   renderListWithTemplate(recipeCardTemplate, el, recipes);

@@ -1,5 +1,7 @@
-import { getParam } from "./utils.mjs";
+import { getParam, loadHeaderFooter } from "./utils.mjs";
 import productDetails from "./productDetails.mjs";
+
+loadHeaderFooter();
 
 const productLabel = getParam("recipe");
 
