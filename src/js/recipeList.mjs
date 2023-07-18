@@ -8,9 +8,9 @@ function recipeCardTemplate(recipe) {
     src="${recipe.image}"
     alt="Image of ${recipe.label}"
   />
-  <h3 class="card__name">${recipe.label}</h3>
-  <h2 class="card__name">${recipe.dietLabels}</h2>
-  <p class="product-card__price">${recipe.yield}</p></a>
+  <h3 class="recipe-card-name">${recipe.label}</h3>
+  <h2 class="recipe-card-diet">Diet: ${recipe.dietLabels}</h2>
+  <p class="recipe-card-yield">Yield: ${recipe.yield}</p></a>
 </li>`
 }
 
