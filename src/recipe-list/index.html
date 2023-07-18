@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipe Collection | Home</title>
 
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,27 +13,17 @@
       rel="stylesheet"
     />
 
-    <script src="../js/product.js" type="module"></script>
+    <script src="../js/recipe-list.js" type="module"></script>
   </head>
 
   <body>
     <header class="divider" id="main-header"></header>
     <main class="divider">
       <div>
-        <p>Prepare and save your favorite dishes</p>
+        <h3>Search recipes for your favorite dishes</h3>
       </div>
-      <section class="recipe-detail">
-        <h2 id="recipeName"></h2>
-        <p>Diet:&nbsp;<span id="recipeDietLabel"></span></p>
-        <p>Yield:&nbsp;<span id="recipeYield"></span></p>
-        <!--  <h2 class="divider" id="productNameWithoutBrand"></h2>-->
-        <img id="recipeImage" class="divider" src="" alt="" />
-        <p class="">Ingredients:</p>
-        <p id="recipeIngredients"></p>
-        <p class="" id="recipeInstructions"></p>
-        <!--<div class="product-detail__add">
-        <button id="addToCart" data-id="">Add to Cart</button>
-      </div>-->
+      <section class="list-catagory">
+        <ul class="recipe-list"></ul>
       </section>
     </main>
     <footer id="main-footer"></footer>

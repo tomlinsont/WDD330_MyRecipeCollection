@@ -6,13 +6,13 @@
   --primary-color: #65135e;
   --secondary-color: #964db8;
   --tertiary-color: #c7b88b;
-  --light-orange: #f0e1ba;
-  --light-red: #B96854;
+  --light-orange: #f1ebdc;
+  --light-red: #b96854;
   --dark-gray: #434545;
   --light-gray: #d0d0d0;
   /* font sizes */
   --font-base: 16px;
-  --small-font: 0.8em;
+  --small-font: 0.7em;
   --large-font: 1.2em;
 }
 * {
@@ -26,8 +26,10 @@ body {
   color: var(--dark-gray);
   background-color: var(--light-orange);
 }
-h1, h2, h3 {
-  color: #81574B;
+h1,
+h2,
+h3 {
+  color: #81574b;
   font-family: "Fira Sans";
 }
 img {
@@ -66,7 +68,6 @@ header {
   display: none;
 }
 
-
 /* utility classes */
 .highlight {
   color: var(--tertiary-color);
@@ -88,43 +89,67 @@ button {
 /* End utility classes */
 
 /* main  */
-main p {
+main div h3 {
   font-weight: bold;
+  font-size: 1em;
 }
+
+/* Product Grid */
+.foodCat-grid {
+  display: grid;
+  grid-template-columns: 20% 20% 20%;
+  grid-column-gap: 15%;
+  list-style-type: none;
+  padding-left: 0;
+  margin: auto;
+}
+.foodCat-grid li {
+  /* border: black solid 1px;*/
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.5em;
+}
+.foodCat-grid li a {
+  text-decoration: none;
+}
+/* End Product Grid */
+
 .recipe-list {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   list-style-type: none;
   padding-left: 0;
 }
 
+/* recipe cards */
 .recipe-card {
   flex: 1 1 45%;
   margin: 0.25em;
   padding: 0.5em;
-  border: 1px solid var(--light-grey);
+  border: 2px solid var(--dark-grey);
   max-width: 250px;
+}
+.recipe-card a {
+  text-decoration: none;
 }
 .recipe-card p,
 .recipe-card h2,
 .recipe-card h3 {
   margin: 0.5em 0;
+  color: #81574b;
 }
 .recipe-card-name {
+  font-size: 0.8em;
+}
+.recipe-card-yield,
+.recipe-card-diet {
   font-size: var(--small-font);
 }
-
-.card__brand {
-  font-size: var(--small-font);
-}
-
-.card__name {
-  font-size: 1em;
-}
+/* End Card Styles */
 
 /* footer */
-.row{
+.row {
   font-family: var(--font-body);
   font-size: var(--small-font);
   color: var(--dark-gray);
@@ -132,20 +157,36 @@ main p {
 }
 
 @media screen and (min-width: 500px) {
+  :root {
+    --small-font: 0.8em;
+    --large-font: 1.25em;
+  }
   body {
     max-width: 1080px;
     margin: auto;
   }
-  /*.mission {
-    font-size: 1.2em;
-  }*/
-  .cart-card {
-    font-size: inherit;
-    grid-template-columns: 150px auto 15%;
-    display: grid;
-  grid-template-columns: 25% auto 15%;
-  font-size: var(--small-font);
-  /* max-height: 120px; */
-  align-items: center;
+  main div h3 {
+    font-weight: bold;
+    font-size: 1.75em;
+  }
+  .recipe-card-name {
+    font-size: var(--font-base);
+  }
+  .foodCat-grid {
+    grid-template-columns: 20% 20% 20%;
+    grid-column-gap: 20%;
+    list-style-type: none;
+    padding: 5% 5%;
+    margin: auto;
+  }
+  .foodCat-grid li {
+    text-align: center;
+  }
+  .foodCat-grid li h2 {
+    font-size: 2.5em;
+    font-weight: 600;
+  }
+  .foodCat-grid li a img {
+    width: 300px;
   }
 }
