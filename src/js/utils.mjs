@@ -39,6 +39,7 @@ export function renderListWithTemplate(
   if (clear) {
     parentElement.innerHTML = "";
   }
+  
   const htmlString = list.map(templateFn);
   parentElement.insertAdjacentHTML(position, htmlString.join(""));
 }

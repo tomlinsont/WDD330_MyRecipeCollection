@@ -4,5 +4,4 @@ import productDetails from "./productDetails.mjs";
 loadHeaderFooter();
 
 const productLabel = getParam("recipe");
-
 productDetails(productLabel);

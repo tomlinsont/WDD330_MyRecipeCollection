@@ -6,7 +6,7 @@ function convertToJson(res) {
   }
 }
 
-export function getData(category = "chicken") {
+export  function getData(category = "chicken") {
   return fetch(`../json/${category}.json`)
     .then(convertToJson)
     .then((data) => data);
@@ -14,6 +14,5 @@ export function getData(category = "chicken") {
 
 export async function findProductByLabel(label) {
   const recipes = await getData();
-  console.log(recipes);
   return recipes.find((item) => item.label === label);
 }

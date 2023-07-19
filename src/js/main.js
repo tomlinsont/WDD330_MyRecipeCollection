@@ -4,4 +4,3 @@ import recipeList from "./recipeList.mjs";
 loadHeaderFooter();
 
 recipeList(".recipe-list", "chicken");
-
