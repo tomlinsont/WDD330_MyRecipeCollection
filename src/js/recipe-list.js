@@ -5,4 +5,4 @@ loadHeaderFooter();
 
 const category = getParam("category");
 console.log(category);
-recipeList(".recipe-list", "chicken");
+recipeList(".recipe-list", category);
