@@ -6,7 +6,7 @@ function convertToJson(res) {
   }
 }
 
-export  function getData(category = "chicken") {
+export function getData(category = "chicken") {
   return fetch(`../json/${category}.json`)
     .then(convertToJson)
     .then((data) => data);

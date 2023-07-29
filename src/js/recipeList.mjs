@@ -23,10 +23,10 @@ function renderRecipeList(recipeList, el) {
 export default async function recipeList(selector, category) {
   // get the element we will insert the list into from the selector
   const el = document.querySelector(selector);
-  console.log(category);
+  console.log("category: ");
   // get the list of products
   const recipes = await getData(category);
-
+  //console.log(recipes);
   // render out the product list to the element
   renderListWithTemplate(recipeCardTemplate, el, recipes);
 }
